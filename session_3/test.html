@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        function sum(...args) {
+            let total = 0;
+            for (let num of args) {
+                total += num;
+            }
+            return total;
+        }
+        function product(...args) {
+            let total = 1;
+            for (let num of args) {
+                total *= num;
+            }
+            return total;
+        }
+        let x = sum(4,9,14,25,29,100,66,77);
+        let y = product(10,2);
+        document.getElementById("demo").innerHTML = "SUM: " + x ;  
+        document.getElementById("demo1").innerHTML = "PRODUCT: " + y ;
+    </script>
+</body>
+</html>
